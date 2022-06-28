@@ -1,0 +1,37 @@
+<div class="columns">
+  <div class="column">
+    <app-card [name]="cardForm.controls.name.value" [cardNumber]="cardForm.controls.cardNumber.value"
+      [expiration]="cardForm.controls.expiration.value"></app-card>
+  </div>
+
+  <div class="column">
+  <!-- to submit -->
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    <app-input [control]="cardForm.controls.name" label="Name"></app-input>
+    <app-input [control]="cardForm.controls.cardNumber" label="Card Number"></app-input>
+    <div class="columns">
+      <div class="column">
+        <app-input [control]="cardForm.controls.expiration" label="Expiration"></app-input>
+      </div>
+      <div class="column">
+        <app-input [control]="cardForm.controls.securityCode" label="Security Code"></app-input>
+      </div>
+    </div>
+    <div class="buttons">
+      <button [disabled]="cardForm.invalid" class="button is-primary" type="submit">Submit</button>
+      <!-- type button cause we dont want default behivoru of submit -->
+      <button class="button is-warning" (click)="onResetClick()" type="button">Reset</button>
+    </div>
+  </form>
+</div>
+
+</div>
+
+<!-- The difference is subtle. Attributes are refering 
+    to additional information of an object. 
+    Properties are describing the characteristics of an object. -->
+<!-- each time u update inputs it updates this div -->
+<!-- <div>form contents: {{cardForm.value|json}}</div>
+<div>form is valid: {{cardForm.valid}}</div> -->
+<!-- cardform errors cotnrol of name -->
+<!-- <div>Errors around name: {{cardForm.controls.name.errors | json }}</div> -->
