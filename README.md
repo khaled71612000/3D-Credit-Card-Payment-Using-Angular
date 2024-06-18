@@ -1,4 +1,9 @@
-# Creditcard
+3D Credit Card Payment Using Angular is a project developed with Angular that demonstrates how to implement a 3D secure credit card payment system. This project showcases an interactive 3D credit card form, providing a modern and engaging user experience for payment processing.
+
+Features
+3D Secure Payment Form: Interactive 3D credit card form.
+Angular: Built using Angular CLI version 10.1.0.
+Real-time Validation: Immediate feedback on form input.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
